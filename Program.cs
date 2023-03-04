@@ -75,7 +75,64 @@ namespace Labortarotio_01_04
                 Console.WriteLine(num1 + " = " + num2);
             }
 
+            Console.WriteLine("EJERCICIO 3: JERARQUIA DE OPERACIONES");
 
+            //VARIABLES
+            double a, b, c;
+            double r1, r2, r3, r4;
+
+            //PEDIR DATOS
+            Console.WriteLine("INGRESE A");
+            a = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("INGRESE B");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("INGRESE C");
+            c = Convert.ToDouble(Console.ReadLine());
+
+            //OPERACIONES
+         
+            //INCISIO 1
+            r1 = a * b + c;
+
+            //INCISO 2
+            r2 = a * (b + c);
+
+            //INCISO 3
+            r3 = a / (b * c);
+
+            //INCISO 4
+            r4 = (3 * a + 2 * b) / (c * c);
+
+            //RESPUESTAS
+            Console.WriteLine("EL RESULTADO DEL PRIMER INCISO ES: " + r1);
+            Console.WriteLine("EL RESULTADO DEL SEGUNDO INCISO ES: " + r2);
+            Console.WriteLine("EL RESULTADO DEL TERCER INCISO ES: " + r3);
+            Console.WriteLine("EL RESULTADO DEL CUARTO INCISO ES: " + r4);
+
+            //EJERCICIO 4
+            Console.WriteLine("EJERCICIO 4: FORMULA GENERAL");
+
+
+            //FORMULA
+            double determinante, raiz1, raiz2;
+
+
+            determinante = (b * b) - (4 * (a) * (c));
+
+            if (determinante <= 0)
+            {
+                Console.WriteLine("ERROR: LA DETERMINANTE ES INVALIDA");
+            }
+            else
+            {
+                raiz1 = (-(b) + Math.Sqrt(determinante)) / (2 * a);
+                raiz2 = (-(b) - Math.Sqrt(determinante)) / (2 * a);
+
+                Console.WriteLine("X1 = " + raiz1);
+                Console.WriteLine("X2 = " + raiz2);
+            }
         }
     }
 }
